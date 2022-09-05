@@ -1,0 +1,52 @@
+# Name: Maurice Fingers
+# File Name: Students GPA
+# This app will accept students name and GPAs and test
+# if the student qualifies for the Dean's list or Honor roll.
+
+# Ask user to enter student last name.
+last_name = input("Enter the student's Last Name: ")
+# Checking to see if last name entered was ZZZ.
+while last_name != "ZZZ":
+    # Ask user to enter first name and student GPA.
+    first_name = input("Enter the student's First Name: ")
+    students_GPA = float(input("What is Student's GPA: "))
+# Checking if GPA is 3.5 or more.
+    if students_GPA >= 3.5:
+        print(f"{first_name} {last_name} has made the the Dean's List")
+        last_name = input("Enter the student's Last Name: ")
+# Checking if GPA is 3.25 or more.
+    elif students_GPA >= 3.25:
+        print(f"{first_name}{last_name} has made the Honor Roll. ")
+        break
+# Checking if GPA is less than 3.25
+    if students_GPA <= 3.25:
+        print(
+            f"Sorry {first_name}{last_name} didn't make the Dean's List or the Honor Roll .")
+        last_name = input("Enter the student's Last Name: ")
+
+Enter the student's Last Name: Fingers
+Enter the student's First Name: Dad
+What is Student's GPA: 4.0
+Dad Fingers has made the the Dean's List
+
+Enter the student's Last Name: Fingers
+Enter the student's First Name: Mom
+What is Student's GPA: 3.7
+Mom Fingers has made the the Dean's List
+
+Enter the student's Last Name: Fingers
+Enter the student's First Name: Baby
+What is Student's GPA: 3.0
+Sorry BabyFingers didn't make the Dean's List or the Honor Roll .
+
+Enter the student's Last Name: Fingers
+Enter the student's First Name: Boy
+What is Student's GPA: 3.5
+Boy Fingers has made the the Dean's List
+
+Enter the student's Last Name: Fingers
+Enter the student's First Name: Giant
+What is Student's GPA: 3.27
+Giant Fingers has made the Honor Roll. 
+
+Enter the student's Last Name: ZZZ
